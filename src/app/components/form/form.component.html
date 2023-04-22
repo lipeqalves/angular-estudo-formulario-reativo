@@ -1,0 +1,63 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <label for="tipo">Tipo de veículo</label>
+  <select
+    formControlName="tipoVeiculo"
+    name="select"
+    class="select"
+    id="tipo"
+    required="true"
+  >
+    <option >Escolha o veiculo</option>
+    <option value ="carros" >Carro</option>
+    <option value="motos" >Moto</option>
+    <option value="caminhoes" >Caminhão</option>
+  </select>
+  <label for="tipo">Marca</label>
+  <select
+    formControlName="marca"
+    name="select"
+    class="select"
+    id="tipo"
+    required="true"
+  >
+    <option >Escolha a marca</option>
+    <option value ="marca 1" >marca 1</option>
+    <option value="marca 2" >marca 2</option>
+    <option value="marca 3" >marca 3</option>
+  </select>
+  <label for="tipo">Modelo</label>
+  <select
+    formControlName="modelo"
+    name="select"
+    class="select"
+    id="tipo"
+    required="true"
+  >
+    <option >Escolha o modelo</option>
+    <option value ="modelo 1" >modelo 1</option>
+    <option value="modelo 2" >modelo 2</option>
+    <option value="modelo 3" >modelo 3</option>
+  </select>
+  <label for="tipo">Ano</label>
+  <select
+    formControlName="ano"
+    name="select"
+    class="select"
+    id="tipo"
+    required="true"
+  >
+    <option >Escolha o Ano</option>
+    <option value ="Ano 1" >Ano 1</option>
+    <option value="Ano 2" >Ano 2</option>
+    <option value="Ano 3" >Ano 3</option>
+  </select>
+
+  <label for="name">Valor de Venda: </label>
+  <input type="text" formControlName="valorVenda" required="true"/>
+  <button type="submit" [disabled]="!form.valid">Submit</button>
+
+</form>
+<div>
+  <p >{{form.value.valorVenda}}</p>
+</div>
